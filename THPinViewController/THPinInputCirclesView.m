@@ -9,6 +9,8 @@
 #import "THPinInputCirclesView.h"
 #import "THPinInputCircleView.h"
 
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
 @interface THPinInputCirclesView ()
 
 @property (nonatomic, strong) NSMutableArray *circleViews;
@@ -28,6 +30,10 @@
     self = [super init];
     if (self)
     {
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+            [self setSemanticContentAttribute:UISemanticContentAttributeForceLeftToRight];
+        }
+        
         _pinLength = pinLength;
         
         _circleViews = [NSMutableArray array];
@@ -58,6 +64,7 @@
     }
     return self;
 }
+
 
 - (CGSize)intrinsicContentSize
 {

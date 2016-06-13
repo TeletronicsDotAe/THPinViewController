@@ -9,6 +9,8 @@
 #import "THPinNumPadView.h"
 #import "THPinNumButton.h"
 
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
 @interface THPinNumPadView ()
 
 @property (nonatomic, assign) CGFloat hPadding;
@@ -53,6 +55,9 @@
     {
         UIView *rowView = [[UIView alloc] init];
         rowView.translatesAutoresizingMaskIntoConstraints = NO;
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+            [rowView setSemanticContentAttribute:UISemanticContentAttributeForceLeftToRight];
+        }
         [self addSubview:rowView];
         [self addConstraint:[NSLayoutConstraint constraintWithItem:rowView attribute:NSLayoutAttributeCenterX
                                                          relatedBy:NSLayoutRelationEqual

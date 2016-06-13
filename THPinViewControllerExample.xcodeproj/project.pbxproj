@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2237FC621BE08F640095F2C0 /* THAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2237FC611BE08F640095F2C0 /* THAlertController.m */; settings = {ASSET_TAGS = (); }; };
+		32A05C42D5F5A27B28B3114D /* THPinBottomButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A05D2588DE7AD7D192966F /* THPinBottomButtonView.m */; };
 		E2075FE01A160CCB0018078F /* THPinViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2075FDF1A160CCB0018078F /* THPinViewController.bundle */; };
 		E222D1FD1902F00900DD1762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E222D1FB1902F00900DD1762 /* Main.storyboard */; };
 		E25C5FBF192C993F0073E612 /* confidential@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E25C5FBE192C993F0073E612 /* confidential@2x.png */; };
@@ -43,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2237FC5A1BE087250095F2C0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2237FC5B1BE087250095F2C0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2237FC5C1BE087250095F2C0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2237FC601BE08F640095F2C0 /* THAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THAlertController.h; sourceTree = "<group>"; };
+		2237FC611BE08F640095F2C0 /* THAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THAlertController.m; sourceTree = "<group>"; };
+		32A0543EC505FD38995CAED4 /* THPinBottomButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPinBottomButtonView.h; sourceTree = "<group>"; };
+		32A05D2588DE7AD7D192966F /* THPinBottomButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPinBottomButtonView.m; sourceTree = "<group>"; };
 		E2075FDF1A160CCB0018078F /* THPinViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = THPinViewController.bundle; sourceTree = "<group>"; };
 		E222D1FC1902F00900DD1762 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24B76CC195D674F00705E35 /* THPinViewControllerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPinViewControllerMacros.h; sourceTree = "<group>"; };
@@ -139,6 +148,8 @@
 		E26048A719027D01006ACBC7 /* THPinViewControllerExample */ = {
 			isa = PBXGroup;
 			children = (
+				2237FC601BE08F640095F2C0 /* THAlertController.h */,
+				2237FC611BE08F640095F2C0 /* THAlertController.m */,
 				E26048B019027D01006ACBC7 /* THAppDelegate.h */,
 				E26048B119027D01006ACBC7 /* THAppDelegate.m */,
 				E26048B619027D01006ACBC7 /* THViewController.h */,
@@ -199,6 +210,8 @@
 				E24B76CC195D674F00705E35 /* THPinViewControllerMacros.h */,
 				E25C5FC3192CBF010073E612 /* UIImage+ImageEffects.h */,
 				E25C5FC4192CBF010073E612 /* UIImage+ImageEffects.m */,
+				32A05D2588DE7AD7D192966F /* THPinBottomButtonView.m */,
+				32A0543EC505FD38995CAED4 /* THPinBottomButtonView.h */,
 			);
 			path = THPinViewController;
 			sourceTree = "<group>";
@@ -248,7 +261,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TH;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Thomas Heß";
 				TargetAttributes = {
 					E26048BE19027D01006ACBC7 = {
@@ -267,6 +280,7 @@
 				es,
 				it,
 				"zh-Hans-CN",
+				ar,
 			);
 			mainGroup = E260489519027D01006ACBC7;
 			productRefGroup = E260489F19027D01006ACBC7 /* Products */;
@@ -317,6 +331,8 @@
 				E26048DF19027DBC006ACBC7 /* THPinViewController.m in Sources */,
 				E26048DD19027DBC006ACBC7 /* THPinNumButton.m in Sources */,
 				E2742FCB19058BCA003EF85C /* THPinView.m in Sources */,
+				2237FC621BE08F640095F2C0 /* THAlertController.m in Sources */,
+				32A05C42D5F5A27B28B3114D /* THPinBottomButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +359,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E222D1FC1902F00900DD1762 /* en */,
+				2237FC5A1BE087250095F2C0 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -351,6 +368,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E26048AB19027D01006ACBC7 /* en */,
+				2237FC5B1BE087250095F2C0 /* ar */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -359,6 +377,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E26048CA19027D01006ACBC7 /* en */,
+				2237FC5C1BE087250095F2C0 /* ar */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -389,6 +408,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -410,7 +430,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +485,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,7 +506,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "THPinViewControllerExample/THPinViewControllerExample-Prefix.pch";
 				INFOPLIST_FILE = "THPinViewControllerExample/THPinViewControllerExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "name.thomashess.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -500,7 +521,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "THPinViewControllerExample/THPinViewControllerExample-Prefix.pch";
 				INFOPLIST_FILE = "THPinViewControllerExample/THPinViewControllerExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "name.thomashess.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -522,6 +544,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "THPinViewControllerExampleTests/THPinViewControllerExampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.thomashess.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -540,6 +563,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "THPinViewControllerExample/THPinViewControllerExample-Prefix.pch";
 				INFOPLIST_FILE = "THPinViewControllerExampleTests/THPinViewControllerExampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.thomashess.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

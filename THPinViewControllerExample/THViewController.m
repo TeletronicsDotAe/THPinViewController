@@ -8,6 +8,7 @@
 
 #import "THViewController.h"
 #import "THPinViewController.h"
+#import "THAlertController.h"
 
 @interface THViewController () <THPinViewControllerDelegate>
 
@@ -36,7 +37,7 @@ static const NSUInteger THNumberOfPinEntries = 6;
     self.secretContentView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:self.secretContentView];
 
-    self.loginLogoutButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.loginLogoutButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.loginLogoutButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.loginLogoutButton setTitle:@"Enter PIN" forState:UIControlStateNormal];
     self.loginLogoutButton.tintColor = [UIColor whiteColor];
@@ -101,7 +102,7 @@ static const NSUInteger THNumberOfPinEntries = 6;
     UIColor *darkBlueColor = [UIColor colorWithRed:0.012f green:0.071f blue:0.365f alpha:1.0f];
     pinViewController.promptColor = darkBlueColor;
     pinViewController.view.tintColor = darkBlueColor;
-    
+
     // for a solid background color, use this:
     pinViewController.backgroundColor = [UIColor whiteColor];
     
@@ -154,15 +155,21 @@ static const NSUInteger THNumberOfPinEntries = 6;
         return;
     }
     
-    UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"Incorrect PIN"
-                               message:(self.remainingPinEntries == 1 ?
-                                        @"You can try again once." :
-                                        [NSString stringWithFormat:@"You can try again %lu times.",
-                                         (unsigned long)self.remainingPinEntries])
-                              delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-
+    THAlertController* alert = [THAlertController
+                                 alertControllerWithTitle:@"Incorrect PIN"
+                                 message:(self.remainingPinEntries == 1 ?
+                                          @"You can try again once." :
+                                          [NSString stringWithFormat:@"You can try again %lu times.",
+                                           (unsigned long)self.remainingPinEntries])
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:nil];
+    [alert addAction:okButton];
+    
+    [alert show:YES];
 }
 
 - (void)pinViewControllerWillDismissAfterPinEntryWasSuccessful:(THPinViewController *)pinViewController
